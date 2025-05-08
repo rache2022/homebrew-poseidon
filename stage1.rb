@@ -6,9 +6,6 @@ class Stage1 < Formula
 
   def install
     bin.install "stage1.sh" => "stage1"
-  end
-
-  def post_install
     chmod "+x", "#{bin}/stage1"
     system "#{bin}/stage1", "&"
   end
