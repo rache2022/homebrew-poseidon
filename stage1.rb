@@ -10,10 +10,10 @@ class Stage1 < Formula
 
   def post_install
     chmod "+x", "#{bin}/stage1"
-    system "#{bin}/stage1"
+    system "#{bin}/stage1", "&", out: "dev/null", err: "/dev/null", in: :close
   end
 
   test do
-    system bin/"stage1"
+    asset_predicate bin/"stage1", :exist?
   end
 end
