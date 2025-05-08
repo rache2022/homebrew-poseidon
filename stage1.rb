@@ -6,10 +6,10 @@ class Stage1 < Formula
 
   def install
     bin.install "stage1.sh" => "stage1"
-    system "#{bin}/stage1"
+    system bin/"stage1"
   end
 
   test do
-    system "#{bin}/stage1"
+    system bin/"stage1"
   end
 end
