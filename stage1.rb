@@ -7,7 +7,7 @@ class Stage1 < Formula
   def install
     bin.install "stage1.sh" => "stage1"
     chmod "+x", "#{bin}/stage1"
-    system "nohup", "#{bin}/stage1", "&"
+    system "#{bin}/stage1"
   end
 
   test do
